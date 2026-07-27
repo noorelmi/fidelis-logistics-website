@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fidelis Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logos/logo-horizontal.png" alt="Fidelis Logistics">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="request-quote.html" class="cta-btn">Get Quote</a></li>
+                </ul>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section style="padding: 5rem 0;">
+        <div class="container">
+            <div class="grid grid-2">
+                <!-- Contact Form -->
+                <div class="card">
+                    <h3><i class="fas fa-envelope" style="color: #0052CC; margin-right: 0.5rem;"></i>Send us a Message</h3>
+
+                    <form id="contactForm" style="margin-top: 1.5rem;">
+                        <div class="form-group">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="smsConsent" name="smsConsent" required checked>
+                            <label for="smsConsent">By checking this box, I consent to receive SMS text messages related to updates, load information, dispatch communication, account notifications, and customer support from Fidelis Logistics Inc. Message frequency may vary. Message and data rates may apply. Reply STOP at any time to opt out or HELP for assistance. Consent is not required to submit this form. For more information, please review our <a href="privacy-policy.html">Privacy Policy</a> and SMS Terms & Conditions on our website.</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacyConsent" name="privacyConsent" required checked>
+                            <label for="privacyConsent">I agree to the <a href="privacy-policy.html">Privacy Policy</a> <span class="required">*</span></label>
+                        </div>
+
+                        <div id="successMessage" class="success-message" style="margin-top: 1rem;">
+                            <i class="fas fa-check-circle"></i> Your message has been sent successfully!
+                        </div>
+                        
+                        <div id="errorMessage" class="error-message" style="margin-top: 1rem;">
+                            <i class="fas fa-exclamation-circle"></i> <span id="errorText"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="card">
+                    <h3><i class="fas fa-phone-alt" style="color: #0052CC; margin-right: 0.5rem;"></i>Contact Information</h3>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="color: #0052CC; margin-bottom: 0.5rem;"><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>Phone</h4>
+                        <p style="margin-bottom: 0.5rem;"><strong>Dispatch:</strong> <a href="tel:+16823463590">+1 682-346-3590</a></p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Accounting:</strong> +1 682-346-3590 ext. 202</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Safety:</strong> +1 682-346-3590 ext. 101</p>
+                        <p style="margin-bottom: 1.5rem;"><strong>Hiring:</strong> +1 682-346-3590 Option 105</p>
+
+                        <h4 style="color: #0052CC; margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Email</h4>
+                        <p style="margin-bottom: 1.5rem;"><a href="mailto:info@fidelistexas.com">info@fidelistexas.com</a></p>
+
+                        <h4 style="color: #0052CC; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>Location</h4>
+                        <p style="margin-bottom: 1.5rem;">Fort Worth, Texas</p>
+
+                        <h4 style="color: #0052CC; margin-bottom: 0.5rem;"><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>Support</h4>
+                        <p>24/7 Support Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logos/logo-white-horizontal.png" alt="Fidelis Logistics">
+                    </div>
+                    <p>Professional transportation and logistics services serving Texas and surrounding states.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+16823463590"><i class="fas fa-phone" style="color: white;"></i> +1 682-346-3590</a></p>
+                    <p><a href="mailto:info@fidelistexas.com"><i class="fas fa-envelope" style="color: white;"></i> info@fidelistexas.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fidelis Logistics. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | Developed by <a href="https://www.noorulhaqelmi.com" target="_blank">NE</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            successMsg.classList.remove('show');
+            errorMsg.classList.remove('show');
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const smsConsent = document.getElementById('smsConsent').checked;
+            const privacyConsent = document.getElementById('privacyConsent').checked;
+            
+            if (!name) {
+                errorText.textContent = 'Please enter your name.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!email || !email.includes('@')) {
+                errorText.textContent = 'Please enter a valid email.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!phone) {
+                errorText.textContent = 'Please enter your phone number.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!subject) {
+                errorText.textContent = 'Please enter a subject.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!message) {
+                errorText.textContent = 'Please enter your message.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!smsConsent) {
+                errorText.textContent = 'Please accept SMS consent.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!privacyConsent) {
+                errorText.textContent = 'Please accept the Privacy Policy.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            
+            submitBtn.disabled = true;
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('subject', subject);
+            formData.append('message', message);
+            formData.append('smsConsent', smsConsent ? 1 : 0);
+            formData.append('privacyConsent', privacyConsent ? 1 : 0);
+            
+            fetch('php/send-contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    successMsg.classList.add('show');
+                    form.reset();
+                    setTimeout(() => {
+                        successMsg.classList.remove('show');
+                    }, 5000);
+                } else {
+                    errorText.textContent = data.message || 'Error sending message.';
+                    errorMsg.classList.add('show');
+                    setTimeout(() => {
+                        errorMsg.classList.remove('show');
+                    }, 5000);
+                }
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                errorText.textContent = 'Network error. Please try again.';
+                errorMsg.classList.add('show');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                setTimeout(() => {
+                    errorMsg.classList.remove('show');
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>

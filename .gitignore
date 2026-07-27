@@ -1,0 +1,26 @@
+# ==========================================
+# Fidelis Logistics Website - .gitignore
+# ==========================================
+
+# 🔒 Sensitive files - NEVER commit these
+php/mail-config.php
+
+# PHP error logs
+*.log
+error_log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies (if any added later)
+node_modules/
+vendor/

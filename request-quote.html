@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request A Quote - Fidelis Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logos/logo-horizontal.png" alt="Fidelis Logistics">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="request-quote.html" class="active cta-btn">Get Quote</a></li>
+                </ul>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Request A Quote</h1>
+            <p>Get your free shipping quote in minutes</p>
+        </div>
+    </section>
+
+    <!-- QUOTE FORM SECTION -->
+    <section style="padding: 5rem 0;">
+        <div class="container">
+            <div class="card">
+                <h3><i class="fas fa-file-invoice-dollar" style="color: #0052CC; margin-right: 0.5rem;"></i>Get Your Free Quote</h3>
+                <p style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Fill out the form below and our team will provide you with a competitive quote within 24 hours.</p>
+
+                <form id="quoteForm" style="margin-top: 1.5rem;">
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="+123456789" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Your company name">
+                    </div>
+
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label for="origin">From (City, State) <span class="required">*</span></label>
+                            <input type="text" id="origin" name="origin" placeholder="e.g., Dallas, TX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination (City, State) <span class="required">*</span></label>
+                            <input type="text" id="destination" name="destination" placeholder="e.g., Houston, TX" required>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label for="weight">Weight (lbs)</label>
+                            <input type="text" id="weight" name="weight" placeholder="e.g., 5000">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type <span class="required">*</span></label>
+                            <select id="type" name="type" required>
+                                <option value="">Select Type</option>
+                                <option value="Van">Van</option>
+                                <option value="Reefer">Reefer</option>
+                                <option value="Flatbed">Flatbed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shipmentFrequency">Average Monthly Shipment Count <span class="required">*</span></label>
+                        <select id="shipmentFrequency" name="shipmentFrequency" required>
+                            <option value="">Select Frequency</option>
+                            <option value="One Time Move">One Time Move</option>
+                            <option value="0-10 Loads Per Week">0-10 Loads Per Week</option>
+                            <option value="10+ Loads Per Week">10+ Loads Per Week</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Leave your message here" rows="6"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="smsConsent" name="smsConsent" required checked>
+                        <label for="smsConsent">By checking this box, I consent to receive SMS text messages related to updates, load information, dispatch communication, account notifications, and customer support from Fidelis Logistics Inc. Message frequency may vary. Message and data rates may apply. Reply STOP at any time to opt out or HELP for assistance. Consent is not required to submit this form. For more information, please review our <a href="privacy-policy.html">Privacy Policy</a> and SMS Terms & Conditions on our website.</label>
+                    </div>
+
+                    <div id="successMessage" class="success-message" style="margin-top: 1rem;">
+                        <i class="fas fa-check-circle"></i> Your quote request has been sent successfully! We'll contact you within 24 hours.
+                    </div>
+                    
+                    <div id="errorMessage" class="error-message" style="margin-top: 1rem;">
+                        <i class="fas fa-exclamation-circle"></i> <span id="errorText"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        <i class="fas fa-paper-plane"></i> Request Quote
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section style="background: #f5f5f5; padding: 5rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Fidelis Logistics?</h2>
+                <p>Industry-leading logistics solutions</p>
+            </div>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div style="text-align: center;">
+                        <i class="fas fa-clock" style="font-size: 2.5rem; color: #0052CC; margin-bottom: 1rem;"></i>
+                        <h4 style="color: #0052CC; margin-bottom: 0.5rem;">Fast Response</h4>
+                        <p style="font-size: 0.95rem;">We respond to quote requests within 24 hours with competitive pricing.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="text-align: center;">
+                        <i class="fas fa-dollar-sign" style="font-size: 2.5rem; color: #0052CC; margin-bottom: 1rem;"></i>
+                        <h4 style="color: #0052CC; margin-bottom: 0.5rem;">Best Rates</h4>
+                        <p style="font-size: 0.95rem;">Get the most competitive rates in the industry without compromising quality.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="text-align: center;">
+                        <i class="fas fa-check-circle" style="font-size: 2.5rem; color: #0052CC; margin-bottom: 1rem;"></i>
+                        <h4 style="color: #0052CC; margin-bottom: 0.5rem;">Reliable Service</h4>
+                        <p style="font-size: 0.95rem;">99.5% on-time delivery rate with professional drivers and modern equipment.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="text-align: center;">
+                        <i class="fas fa-headset" style="font-size: 2.5rem; color: #0052CC; margin-bottom: 1rem;"></i>
+                        <h4 style="color: #0052CC; margin-bottom: 0.5rem;">24/7 Support</h4>
+                        <p style="font-size: 0.95rem;">Round-the-clock customer support to track your shipment and answer questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logos/logo-white-horizontal.png" alt="Fidelis Logistics">
+                    </div>
+                    <p>Professional transportation and logistics services serving Texas and surrounding states.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+16823463590"><i class="fas fa-phone" style="color: white;"></i> +1 682-346-3590</a></p>
+                    <p><a href="mailto:info@fidelistexas.com"><i class="fas fa-envelope" style="color: white;"></i> info@fidelistexas.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fidelis Logistics. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | Developed by <a href="https://www.noorulhaqelmi.com" target="_blank">NE</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            successMsg.classList.remove('show');
+            errorMsg.classList.remove('show');
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const origin = document.getElementById('origin').value.trim();
+            const destination = document.getElementById('destination').value.trim();
+            const type = document.getElementById('type').value.trim();
+            const shipmentFrequency = document.getElementById('shipmentFrequency').value.trim();
+            const smsConsent = document.getElementById('smsConsent').checked;
+            
+            if (!firstName) {
+                errorText.textContent = 'Please enter your first name.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!lastName) {
+                errorText.textContent = 'Please enter your last name.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!email || !email.includes('@')) {
+                errorText.textContent = 'Please enter a valid email.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!phone) {
+                errorText.textContent = 'Please enter your phone number.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!origin) {
+                errorText.textContent = 'Please enter origin location.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!destination) {
+                errorText.textContent = 'Please enter destination location.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!type) {
+                errorText.textContent = 'Please select a cargo type.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!shipmentFrequency) {
+                errorText.textContent = 'Please select shipment frequency.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            if (!smsConsent) {
+                errorText.textContent = 'Please accept SMS consent.';
+                errorMsg.classList.add('show');
+                return;
+            }
+            
+            submitBtn.disabled = true;
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            
+            const formData = new FormData();
+            formData.append('firstName', firstName);
+            formData.append('lastName', lastName);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('company', document.getElementById('company').value.trim());
+            formData.append('origin', origin);
+            formData.append('destination', destination);
+            formData.append('weight', document.getElementById('weight').value.trim());
+            formData.append('type', type);
+            formData.append('shipmentFrequency', shipmentFrequency);
+            formData.append('message', document.getElementById('message').value.trim());
+            formData.append('smsConsent', smsConsent ? 1 : 0);
+            
+            fetch('php/send-quote.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    successMsg.classList.add('show');
+                    form.reset();
+                    setTimeout(() => {
+                        successMsg.classList.remove('show');
+                    }, 5000);
+                } else {
+                    errorText.textContent = data.message || 'Error submitting quote.';
+                    errorMsg.classList.add('show');
+                    setTimeout(() => {
+                        errorMsg.classList.remove('show');
+                    }, 5000);
+                }
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                errorText.textContent = 'Network error. Please try again.';
+                errorMsg.classList.add('show');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                setTimeout(() => {
+                    errorMsg.classList.remove('show');
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
